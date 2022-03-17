@@ -13278,3 +13278,15 @@ textarea.form-control {
 .bot {
   color: white;
 }
+.imggenz {
+  position: relative;
+  left: 90vh;
+}
+.cabs {
+  position: relative;
+  left: 115vh;
+}
+.fl {
+  display: flex;
+  flex-direction: row;
+}

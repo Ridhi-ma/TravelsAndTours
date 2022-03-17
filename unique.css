@@ -1,0 +1,11 @@
+.box {
+  display: flex;
+  position: relative;
+
+  justify-content: flex-start;
+}
+.down {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
