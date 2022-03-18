@@ -38,6 +38,7 @@
       href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css"
       rel="stylesheet"
     />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
     <style>
       body {
         margin: 0;
@@ -45,39 +46,13 @@
       }
       #map {
         position: absolute;
-        top: 60%;
-        width: 30%;
-        height: 50%;
-      }
-      .coordinates {
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        position: absolute;
-        bottom: 40px;
-        left: 10px;
-        padding: 5px 10px;
-        margin: 0;
-        font-size: 11px;
-        line-height: 18px;
-        border-radius: 3px;
-        display: none;
-      }
-      #marker {
-        background-size: cover;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-
-      .mapboxgl-popup {
-        max-width: 200px;
+        top: 0;
+        bottom: 0;
+        width: 100%;
       }
     </style>
   </head>
   <body>
-    <div id="map"></div>
-    <pre id="coordinates" class="coordinates"></pre>
     <!-- <nav
       class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
       id="ftco-navbar"
@@ -260,7 +235,6 @@
 
           <div class="col-md-6 d-flex">
             <div id="map"></div>
-            <pre id="coordinates" class="coordinates"></pre>
           </div>
         </div>
       </div>
