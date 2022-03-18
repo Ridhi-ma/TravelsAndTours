@@ -34,8 +34,50 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 60%;
+        width: 30%;
+        height: 50%;
+      }
+      .coordinates {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        padding: 5px 10px;
+        margin: 0;
+        font-size: 11px;
+        line-height: 18px;
+        border-radius: 3px;
+        display: none;
+      }
+      #marker {
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .mapboxgl-popup {
+        max-width: 200px;
+      }
+    </style>
   </head>
   <body>
+    <div id="map"></div>
+    <pre id="coordinates" class="coordinates"></pre>
     <!-- <nav
       class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
       id="ftco-navbar"
@@ -217,7 +259,8 @@
           </div>
 
           <div class="col-md-6 d-flex">
-            <div id="map" class="bg-white"></div>
+            <div id="map"></div>
+            <pre id="coordinates" class="coordinates"></pre>
           </div>
         </div>
       </div>
@@ -353,8 +396,39 @@
     <script src="js/bootstrap-datepicker.js"></script>
     <!-- // <script src="js/jquery.timepicker.min.js"></script> -->
     <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoidmFuc2h0YW5kb24xNDE5IiwiYSI6ImNsMHRxMXc3aDBvNnoza3FveDl5MXk0M2UifQ.xEfhZrXOeLClaxhHj2-ntA";
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/dark-v10",
+        style: "mapbox://styles/mapbox/outdoors-v11",
+        center: [80.0363509, 12.8190584],
+        zoom: 16,
+      });
+      new mapboxgl.Marker({
+        draggable: true,
+      })
+        .setLngLat([80.0363509, 12.8190584])
+        .addTo(map);
+
+      map.addControl(new mapboxgl.FullscreenControl());
+      const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+        "GenZ HeadQuarters"
+      );
+
+      // create DOM element for the marker
+      const el = document.createElement("div");
+      el.id = "marker";
+
+      // create the marker
+      new mapboxgl.Marker(el)
+        .setLngLat([80.0363509, 12.8190584])
+        .setPopup(popup) // sets a popup on this marker
+        .addTo(map);
+    </script>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
   </body>
 </html>
