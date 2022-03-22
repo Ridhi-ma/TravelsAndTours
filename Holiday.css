@@ -1,0 +1,40 @@
+.packagecontainer {
+  display: flex;
+  flex-direction: row;
+}
+.hot {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-self: flex-start;
+  width: 40%;
+  height: 30%;
+}
+.hotelimage {
+  width: 80%;
+  height: 50%;
+  margin-top: 1vh;
+  margin-left: 1vh;
+  margin-bottom: 1vh;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+}
+.hotels {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vh;
+  margin-left: 1vh;
+  margin-bottom: 0.8vh;
+  background-color: aqua;
+  width: 60%;
+  margin-right: 1vh;
+}
+.hotelCity {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-self: center;
+}
