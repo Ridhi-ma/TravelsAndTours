@@ -1,0 +1,75 @@
+[
+  {
+    "place": "Punjab",
+    "days": "10",
+    "price": "10,000",
+    "flights": "2",
+    "rating": "4",
+    "cases": "143",
+    "image": "insta-2.jpg",
+    "id": 1
+  },
+  {
+    "place": "Jammu & Kashmir",
+    "days": "12",
+    "price": "12,000",
+    "flights": "2",
+    "rating": "5",
+    "cases": "102",
+    "id": 2
+  },
+  {
+    "place": "Goa",
+    "days": "8",
+    "price": "11,000",
+    "flights": "1",
+    "rating": "4",
+    "cases": "79",
+    "id": 3
+  },
+  {
+    "place": "Maharashtra",
+    "days": "10",
+    "price": "14,000",
+    "flights": "2",
+    "rating": "4",
+    "cases": "176",
+    "id": 4
+  },
+  {
+    "place": "Delhi",
+    "days": "14",
+    "price": "14,000",
+    "flights": "2",
+    "rating": "3",
+    "cases": "155",
+    "id": 5
+  },
+  {
+    "place": "Uttar Pradesh",
+    "days": "7",
+    "price": "8,000",
+    "flights": "2",
+    "rating": "3",
+    "cases": "197",
+    "id": 6
+  },
+  {
+    "place": "Rajasthan",
+    "days": "14",
+    "price": "13,000",
+    "flights": "2",
+    "rating": "4",
+    "cases": "134",
+    "id": 7
+  },
+  {
+    "place": "Kerela",
+    "days": "12",
+    "price": "12,000",
+    "flights": "3",
+    "rating": "4",
+    "cases": "76",
+    "id": 8
+  }
+]
